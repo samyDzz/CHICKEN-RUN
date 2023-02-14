@@ -12,7 +12,8 @@ const chicken_schema = new mongoose.Schema({
   birthday: Date,
   weight: { type: Number, required: true },
   steps: { type: Number, default: 0 },
-  isRunning: { type: Boolean, default: false }
+  isRunning: { type: Boolean, default: false },
+  farmyard: { type: mongoose.Schema.Types.ObjectId, ref : "Farmyard" }
 });
 
 const Chicken = mongoose.model('Chicken', chicken_schema);
